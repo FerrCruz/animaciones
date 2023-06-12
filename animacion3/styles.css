@@ -1,0 +1,59 @@
+* {
+     background-color: #fefbd8;
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: "Courier New", Courier, monospace;
+}
+
+body {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 100vh;
+}
+
+.wrapper {
+     position: relative;
+}
+
+.wrapper input {
+     width: 350px;
+     height: 50px;
+     padding: 0 15px;
+     outline: none;
+     font-size: 16px;
+     color: grey;
+     border-radius: 10px;
+     border: 2px solid #333;
+}
+
+.wrapper label {
+     position: absolute;
+     top: 50%;
+     left: 5%;
+     transform: translateY(-50%);
+     color: gray;
+     font-size: 25px;
+     padding: 0 5px;
+     pointer-events: none;
+     transition: 0.5s;
+}
+
+.wrapper input:focus ~ label,
+.wrapper input:valid ~ label {
+     top: 0;
+     color: #18189c;
+     border-radius: 10px;
+     border: 2px solid ;
+     font-size: 25px;
+}
+
+.wrapper input:focus,
+.wrapper input:valid {
+     border: 2px solid #18189c;
+}
+
+/*
+armar en una sola pag todas las animaciones en seccionar como una pagina de peliculas 
+responsive con bootstrap como un menu de todas las animaciones y sus respectivos codigos*/

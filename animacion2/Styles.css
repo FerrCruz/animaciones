@@ -1,0 +1,142 @@
+* {
+     margin: 0;
+     padding: 0;
+     border: 0;
+     box-sizing:  border-box;
+}
+
+body {
+     height: 100vh;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background-color: #000;
+}
+
+.card-button {
+     position: relative;
+     width: 240px;
+     height: 60px;
+     border-radius: 8px;
+     color: #fff;
+     background-color: #80ced6;
+     overflow: hidden;
+     cursor: pointer;
+     transition: .3s ease;
+
+}
+
+.card-button:active {
+     transform: scale(.9);
+}
+
+.card-button .fa-shopping-cart {
+     position: absolute;
+     top: 50%;
+     left: -10%;
+     transform: translate(-50%,-50%);
+     z-index: 2;
+     font-size: 2rem;
+}
+
+.card-button .fa-box {
+     position: absolute;
+     top: -20%;
+     left: 52%;
+     transform: translate(-50%,50%);
+     z-index: 3;
+     font-size: 1.2rem;
+}
+
+.card-button .add-to-card,
+.card-button .added {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%,-50%);
+     font: 700 18px;
+}
+
+.card-button .added {
+     opacity: 0;
+}
+
+.card-button.clicked .fa-shopping-cart {
+     animation: card 1.5s ease-in-out forwards;
+}
+
+.card-button.clicked .fa-box {
+     animation: box 1.5s ease-in-out forwards;
+}
+
+.card-button.clicked .add-to-card {
+     animation: text1 1.5s ease-in-out forwards;
+}
+
+.card-button.clicked .added {
+     animation: text2 1.5s ease-in-out forwards;     
+}
+
+@keyframes card {
+     0% {
+          left: -10%;
+     }
+}
+
+@keyframes card {
+     0% {
+          left: -10%;
+     }
+     40%, 60% {
+          left: 50%;
+     }
+     100% {
+          left: 110%;
+     }
+}
+
+@keyframes box {
+     0%, 40% {
+          top: -20%;
+     }
+
+     60% {
+          top: 40%;
+          left: 52%;
+     }
+
+     100% {
+          top: 40%;
+          left: 112%;
+     }
+}
+
+@keyframes text1 {
+     0% {
+          opacity: 1;
+     }
+
+     20%, 100% {
+          opacity: 0;
+     }
+}
+
+@keyframes text2 {
+     0%, 80% {
+          opacity: 0;
+     }
+     100% {
+          opacity: 1;
+     }
+}
+ 
+
+.my-button {
+     background-color: blue;
+     color: white;
+     transition: background-color 0.3s ease;
+   }
+   
+.my-button:hover {
+     background-color: red;
+}
